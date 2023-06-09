@@ -1,0 +1,25 @@
+using System;
+
+namespace ConversionApp
+{
+    class ConvertValue
+    {
+        public void KilometerToMeter(double kilometers)
+        {
+            double meters = kilometers * 1000;
+            Console.WriteLine("The distance in meters (m) is: " + meters);
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter the distance in kilometers (Km): ");
+            double kilometers = Convert.ToDouble(Console.ReadLine());
+
+            ConvertValue converter = new ConvertValue();
+            converter.KilometerToMeter(kilometers);
+        }
+    }
+}
