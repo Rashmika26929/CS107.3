@@ -1,0 +1,137 @@
+Q1.
+
+1.
+using System;
+
+namespace KilometerToMeterConverterApp
+{
+    class ConvertValues
+    {
+        public void KilometerToMeter()
+        {
+            Console.WriteLine("Enter the distance in kilometers:");
+            double kilometers = Convert.ToDouble(Console.ReadLine());
+
+            double meters = kilometers * 1000;
+
+            Console.WriteLine(kilometers + " kilometers is equal to " + meters + " meters.");
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            ConvertValues converter = new ConvertValues();
+            converter.KilometerToMeter();
+
+            Console.ReadLine();
+        }
+    }
+}
+
+
+
+2.
+using System;
+
+namespace KilometerToMeterConverterApp
+{
+    class ConvertValues
+    {
+        public void KilometerToMeter(double kilometers)
+        {
+            double meters = kilometers * 1000;
+
+            Console.WriteLine(kilometers + " kilometers is equal to " + meters + " meters.");
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter the distance in kilometers:");
+            double inputKilometers = Convert.ToDouble(Console.ReadLine());
+
+            ConvertValues converter = new ConvertValues();
+            converter.KilometerToMeter(inputKilometers);
+
+            Console.ReadLine();
+        }
+    }
+}
+
+
+
+3.
+using System;
+
+namespace KilometerToMeterConverterApp
+{
+    class ConvertValues
+    {
+        public double KilometerToMeter(double kilometers)
+        {
+            double meters = kilometers * 1000;
+            return meters;
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter the distance in kilometers:");
+            double inputKilometers = Convert.ToDouble(Console.ReadLine());
+
+            ConvertValues converter = new ConvertValues();
+            double resultInMeters = converter.KilometerToMeter(inputKilometers);
+
+            Console.WriteLine(inputKilometers + " kilometers is equal to " + resultInMeters + " meters.");
+
+            Console.ReadLine();
+        }
+    }
+}
+
+
+Q2.
+using System;
+
+namespace CirclePropertiesConsoleApp
+{
+    class FindValues
+    {
+        public double FindArea(double radius)
+        {
+            double area = Math.PI * radius * radius;
+            return area;
+        }
+
+        public double FindCircumference(double radius)
+        {
+            double circumference = 2 * Math.PI * radius;
+            return circumference;
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter the radius of the circle:");
+            double radius = Convert.ToDouble(Console.ReadLine());
+
+            FindValues calculator = new FindValues();
+            double area = calculator.FindArea(radius);
+            double circumference = calculator.FindCircumference(radius);
+
+            Console.WriteLine("Area of the circle: " + area);
+            Console.WriteLine("Circumference of the circle: " + circumference);
+
+            Console.ReadLine(); 
+        }
+    }
+}
+

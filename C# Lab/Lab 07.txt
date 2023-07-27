@@ -1,0 +1,114 @@
+Q1.
+using System;
+
+namespace ArrayOperationsConsoleApp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter the size of the arrays:");
+            int size = Convert.ToInt32(Console.ReadLine());
+
+            int[] array1 = new int[size];
+            int[] array2 = new int[size];
+            int[] vectorSum = new int[size];
+            int[] vectorProduct = new int[size];
+            int scalarSum = 0;
+            int scalarProductSum = 0;
+
+            Console.WriteLine("Enter elements for Array 1:");
+            for (int i = 0; i < size; i++)
+            {
+                array1[i] = Convert.ToInt32(Console.ReadLine());
+            }
+
+            Console.WriteLine("Enter elements for Array 2:");
+            for (int i = 0; i < size; i++)
+            {
+                array2[i] = Convert.ToInt32(Console.ReadLine());
+            }
+
+            //  Sum
+            for (int i = 0; i < size; i++)
+            {
+                scalarSum += array1[i] + array2[i];
+            }
+
+            // Sum
+            for (int i = 0; i < size; i++)
+            {
+                vectorSum[i] = array1[i] + array2[i];
+            }
+
+            //  Product
+            for (int i = 0; i < size; i++)
+            {
+                vectorProduct[i] = array1[i] * array2[i];
+            }
+
+            //  Product
+            for (int i = 0; i < size; i++)
+            {
+                scalarProductSum += vectorProduct[i];
+            }
+
+            Console.WriteLine("Scalar Sum: " + scalarSum);
+
+            Console.WriteLine("Vector Sum: ");
+            PrintArray(vectorSum);
+
+            Console.WriteLine("Vector Product: ");
+            PrintArray(vectorProduct);
+
+            Console.WriteLine("Scalar Product Sum: " + scalarProductSum);
+
+            Console.ReadLine(); 
+        }
+
+        static void PrintArray(int[] arr)
+        {
+            foreach (int num in arr)
+            {
+                Console.Write(num + " ");
+            }
+            Console.WriteLine();
+        }
+    }
+}
+
+
+Q2.
+using System;
+
+namespace AnimalDogConsoleApp
+{
+    class Animal
+    {
+        public void DisplayAnimal()
+        {
+            Console.WriteLine("I am an Animal");
+        }
+    }
+
+    class Dog : Animal
+    {
+        public void DisplayDog()
+        {
+            Console.WriteLine("I have four legs");
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Dog dog = new Dog();
+
+            dog.DisplayAnimal();
+            dog.DisplayDog();
+
+            Console.ReadLine();
+        }
+    }
+}

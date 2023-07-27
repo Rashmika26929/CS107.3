@@ -1,0 +1,97 @@
+Q1
+
+using System;
+
+namespace NameAndBatchConsoleApp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter your name:");
+            string name = Console.ReadLine();
+
+            Console.WriteLine("Enter your batch:");
+            string batch = Console.ReadLine();
+
+            Console.WriteLine("Your name: " + name);
+            Console.WriteLine("Your batch: " + batch);
+
+            Console.ReadLine();
+        }
+    }
+}
+
+
+
+Q2.
+using System;
+
+namespace CircleAreaConsoleApp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter the radius of the circle:");
+            double radius = Convert.ToDouble(Console.ReadLine());
+
+            double area = Math.PI * radius * radius;
+
+            Console.WriteLine("The area of the circle is: " + area);
+
+            Console.ReadLine(); 
+        }
+    }
+}
+
+
+Q3.
+using System;
+
+namespace SummationConsoleApp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter the first number:");
+            int number1 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter the second number:");
+            int number2 = Convert.ToInt32(Console.ReadLine());
+
+            int sum = number1 + number2;
+
+            Console.WriteLine("The summation of the numbers is: " + sum);
+
+            Console.ReadLine();
+        }
+    }
+}
+
+
+
+Q4.
+using System;
+
+namespace SalaryAfterTaxConsoleApp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter the employee's salary:");
+            double salary = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Enter the tax rate (in decimal form, e.g., 0.1 for 10%):");
+            double taxRate = Convert.ToDouble(Console.ReadLine());
+
+            double afterTaxSalary = salary * (1 - taxRate);
+
+            Console.WriteLine("Salary after tax: " + afterTaxSalary);
+
+            Console.ReadLine(); 
+        }
+    }
+}
